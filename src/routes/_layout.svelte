@@ -9,6 +9,10 @@
 		// 	...session, ...Content
 		// });
     // return { _SiteData: results, Content, Schedule, Profiles };
+
+    // get Notion collections
+    const test = await this.fetch(`${process.env.NOTION_API}/v1/collection/${WHIMSY}`).then(r => r.json())
+    console.log('----- ', test)
     return { _SiteData: results };
   }
 </script>

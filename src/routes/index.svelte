@@ -45,8 +45,8 @@
 
   import marked from 'marked';
 	import { _content, _contents } from "@/stores/sitedata"
-  // import Notion from '@yawnxyz/svelte-notion'
-  import Notion from '../../../../../svelte-notion/src/Notion.svelte'
+  import Notion from '@yawnxyz/svelte-notion'
+  // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
 
   import Separator from '../components/Separator.svelte'
 
