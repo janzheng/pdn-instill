@@ -12,12 +12,12 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "vclstage":"now",
-    "vclprod":"now --prod",
+    "vclstage": "now",
+    "vclprod": "now --prod",
     "prod": "npm run load-content; now",
     "load-content": "node src/_project/content-loader.js",
-    "commit": "git add . -A ; git commit ; git push origin preview ",
-    "previewforce": "git add . -A ; git commit ; git push origin preview --force",
+    "commit": "git add . -A ; git commit ; git push origin main ",
+    "previewforce": "git add . -A ; git commit ; git push origin main --force",
     "commitprod": "git add . -A ; git commit ; git push origin main --force "
   },
   "browser": {
