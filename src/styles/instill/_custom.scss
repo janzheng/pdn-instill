@@ -1,39 +1,6 @@
 
 
 
-.Home-content {
-	// padding-bottom: 90px;
-	position: relative;
-	z-index: 30;
-}
-    .Home-content-extra img {
-      @media (min-width: 767px) {
-        float: right;
-        max-width: 300px;
-        margin-left: 1rem;
-        margin-bottom: 0.5rem;
-
-      }
-    }
-
-    .Content-box h2 {
-      padding-top: 0;
-    }
-
-    .Content-box table {
-      width: 100%;
-    }
-    
-    // table stuff for pricing
-    th, td {
-      padding: 0.25rem 0.5rem;
-      padding-left: 0;
-    }
-
-
-
-
-
 
 .__border {
   border: 2px solid usetheme(brand-active)

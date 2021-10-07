@@ -106,7 +106,9 @@ export default {
 
         'process.env.LOGFLARE_API': JSON.stringify(process.env.LOGFLARE_API),
         'process.env.LOGFLARE_SOURCE': JSON.stringify(process.env.LOGFLARE_SOURCE),
-        'process.env.NOTION_API': JSON.stringify(process.env.NOTION_API) || JSON.stringify("//notion-cloudflare-worker.yawnxyz.workers.dev")
+        'process.env.NOTION_API': JSON.stringify(process.env.NOTION_API) || JSON.stringify("//notion-cloudflare-worker.yawnxyz.workers.dev"),
+        'process.env.NOTION_WHIMSY': JSON.stringify(process.env.NOTION_WHIMSY),
+      
       }),
 	    sass({
 	     // update includePaths to what suits.

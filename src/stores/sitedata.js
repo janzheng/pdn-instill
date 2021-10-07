@@ -14,6 +14,7 @@ import { retry } from "@/_utils/retry"
 // SiteData should mirror a cytosis.results setup
 // results['Content','Profiles']
 export const SiteData = writable({})
+export const NotionData = writable({})
 
 // gets the record
 export const _get = (name, table='Content') => {
@@ -35,6 +36,22 @@ export const _contents = (names) => {
 } 
 
 
+
+
+// notion helpers
+
+// in a "Whimsy" Notion table, gets the blockid that matches a Name
+// this makes it really easy to look up resources in the Whimsy table
+// e.g. if a table has "_blog" as the Name for a row, it gets the _blockid field
+export const _getBlock = (name, collection='whimsy') => {
+  let result = get(NotionData) && get(NotionData)[collection] && get(NotionData)[collection].rows.find(r => r['Name'] == name)
+  return result['_blockid']
+} 
+
+// gets a blog post
+export const _getPost = (slug) => {
+  return get(NotionData) && get(NotionData)['blog'] && get(NotionData)['blog'].rows.find(r => r['Slug'] == slug)
+} 
 
 
 

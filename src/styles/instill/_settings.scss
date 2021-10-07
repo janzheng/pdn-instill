@@ -116,7 +116,7 @@ $colors-brand: (
   // brand-active: #1faf71, // #065fb1,
   brand-white: #f7fffb, // 
   brand-copy: #273F0B,
-  brand-active: #04960b, // #065fb1,
+  brand-active: #240224, // #065fb1,
   brand-light: #6aaae6, // #065fb1,
   brand-green-white: #e1f3e2,
   brand-green-lightest: #DBF4E9,
@@ -126,7 +126,7 @@ $colors-brand: (
   brand-red: #b90236,
   background-light: #E7FAF3,
   background-white: #F5FAF8,
-  brand-background: #DBF4E9,
+  brand-background: #f7fffb,
   brand-green: #E7FAF3,
 );
  
@@ -175,7 +175,7 @@ $context: (
   
 
   body: usetheme(brand-copy),
-  body-bg: usetheme(brand-background),
+  body-bg: usetheme(bg-white),
   copy: usetheme(brand-copy),
   copy-gray: usetheme(mono-copy),
 

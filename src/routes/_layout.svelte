@@ -10,18 +10,31 @@
 		// });
     // return { _SiteData: results, Content, Schedule, Profiles };
 
-    // get Notion collections
-    const test = await this.fetch(`${process.env.NOTION_API}/v1/collection/${process.env.WHIMSY}`).then(r => r.json())
-    console.log('----- ', test)
-    return { _SiteData: results };
+    // get Notion collections like Whimsy, Blog table .. — Loaded into Svelte Store for easy access
+    const notionData = {
+      whimsy: await this.fetch(`${process.env.NOTION_API}/v1/collection/${process.env.NOTION_WHIMSY}`).then(r => r.json()),
+      // auto-loaded through Whimsy "Collection" resource:
+      // blog: await this.fetch(`${process.env.NOTION_API}/v1/collection/806ca261d2004aa497b5e63715c68329`).then(r => r.json())
+    }
+    // add all "Collection" resources from the Whimsy table into the data object; great for blogs
+    if(notionData.whimsy && notionData.whimsy.rows) {
+      await Promise.all(notionData.whimsy.rows.map( async r => {
+        if(r._resource && r._resource == 'Collection')
+          notionData[r['Name']] = await this.fetch(`${process.env.NOTION_API}/v1/collection/${r['_blockid']}`).then(r => r.json())
+      }))
+    }
+  
+    return { _SiteData: results, _NotionData: notionData };
   }
 </script>
 
 
 <script>
 
-	import { SiteData, _content, _get } from "@/stores/sitedata"
+	import { SiteData, NotionData, _content, _get, _getBlock } from "@/stores/sitedata"
 
+
+	import Nav from '../components/layout/NavInstill.svelte';
 	// import Nav from '../components/layout/NavFull.svelte';
 	// import Nav from '../components/layout/NavTabs.svelte';
 	import Footer from '../components/layout/Footer.svelte';
@@ -30,19 +43,24 @@
 	// This trick passes down preloaded data to all modules
 	// https://stackoverflow.com/questions/60911171/how-to-pass-data-from-a-layout-to-a-page-in-sapper
 	export let segment
-	export let _SiteData  //, Content, Schedule, Profiles
+	export let _SiteData, _NotionData  //, Content, Schedule, Profiles
 
 
   import { stores } from "@sapper/app";
   let page = stores().page
 
-  console.log('_SiteData:', _SiteData)
+  console.log('_layout data:', _SiteData, _NotionData)
 
   // load site data into store
 	$: if(_SiteData) {
 		$SiteData = _SiteData
     // store usage:
     // console.log(_get('_footer', 'Content'), _content('_footer'))
+	}
+
+  // load notion data into store
+	$: if(_SiteData) {
+		$NotionData = _NotionData
 	}
 
 </script>
@@ -86,7 +104,7 @@
 
 
 <div id="top" class="ContentFrame Layout">
-  <!-- <Nav {segment} /> -->
+  <Nav {segment} />
 
   {#key segment}
   

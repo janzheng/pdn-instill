@@ -12,6 +12,25 @@ body {
   font-size: $size;
   line-height: $sizeline;
 }
+.Header {
+	background-color: usetheme(body-bg);
+  border-bottom: 2px solid usetheme(brand);
+}
+
+.Footer {
+  .Footer-content {
+    // padding-top: $size-9;
+    position: relative;
+    z-index: 10;
+  }
+  a { 
+    text-decoration: none !important;
+  }
+
+  border-top: 2px solid usetheme(brand-soft);
+  // text-align: center;
+  background-color: usetheme(body-bg);
+}
 
 
 
@@ -26,7 +45,7 @@ body {
 	z-index: 10; // main content z
 }
 
-.Home {
+.ContentBlock {
 	width: 100%;
 	overflow: hidden;
   background-color: usetheme(background-white);
@@ -40,17 +59,6 @@ hr {
 
 
 
-.__content-footer {
-	// background-color: red;
-	z-index: 0; // footer z
-	position: relative;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-
-  display: grid;
-  place-items: center; // whoa
-}
 
 
 .__content-body {
@@ -101,9 +109,10 @@ input, textarea {
 
 
 
-.Header {
-	background-color: usetheme(background-light);
-}
+
+
+
+
 
 // header tab nav
 .Nav {
@@ -171,17 +180,6 @@ input, textarea {
 // homepage
 
 
-
-.Footer {
-  .Footer-content {
-    // padding-top: $size-9;
-    position: relative;
-    z-index: 10;
-  }
-
-  // text-align: center;
-  background-color: usetheme(background-light);
-}
 
 
 
