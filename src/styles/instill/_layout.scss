@@ -1,0 +1,214 @@
+
+
+html, body, * {
+	@extend ._font-body;
+}
+
+
+body {
+  background-color: usetheme(body-bg); //$color-gray;
+  color: usetheme(brand-copy);
+  font-family: usetheme(font-sans);
+  font-size: $size;
+  line-height: $sizeline;
+}
+
+
+
+
+
+
+// footer feature 
+.__content-frame {
+	// min-height: 100vh;
+	// background-color: blue;
+	position: relative;
+	z-index: 10; // main content z
+}
+
+.Home {
+	width: 100%;
+	overflow: hidden;
+  background-color: usetheme(background-white);
+}
+
+
+
+hr {
+  border-color:usetheme(brand-active-green);
+}
+
+
+
+.__content-footer {
+	// background-color: red;
+	z-index: 0; // footer z
+	position: relative;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+  display: grid;
+  place-items: center; // whoa
+}
+
+
+.__content-body {
+	position: relative;
+	z-index: 30;
+}
+
+
+.ContentFrame-body {
+	// padding-bottom: 140px; // $size-9;
+  position: relative;
+  z-index: 10;
+  // overflow: hidden;   // using this prevents sticky
+  // overflow: auto;
+}
+  
+input {
+	-webkit-appearance: none;
+}
+
+input, textarea {
+    border: solid 2px usetheme(brand-med);
+    border-radius: 4px;
+    background: #ffffff !important;
+   
+    &:focus {
+        background: usetheme(brand-white) !important;
+    }
+ } 
+  ._error {
+      // color: usetheme(danger);
+      color: red;
+  }
+
+    
+
+
+
+.Layout {
+	// applied to /layouts/contentframe etc.
+	// basically it wraps every page
+  background-color: usetheme(bg); // $color-bg;
+  position: relative;
+}
+
+
+
+
+
+
+.Header {
+	background-color: usetheme(background-light);
+}
+
+// header tab nav
+.Nav {
+
+	ul {
+		text-align: center;
+
+    // @include screen-md {
+    //   display: flex;
+    //   justify-content: center;
+    // }
+
+		li {
+			margin: 0.5rem 0.5rem;
+			text-align: left;
+      white-space: nowrap;
+
+      display: inline-block;
+
+			a {
+        background: white;
+        padding: $size-half $size;
+        @extend ._shadow-1;
+        border-radius: $size-5;
+        
+				font-size: 1.1em;
+				text-decoration: none;
+
+				&.__active {
+          background-color: usetheme(brand-active);
+          color: white;
+				}
+
+				&:hover {
+          background-color: usetheme(brand-active);
+          color: white !important;
+				}
+
+			}
+
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Formlet-input-cta {
+	._form-input {
+		width: 100%;
+	}
+}
+
+
+// homepage
+
+
+
+.Footer {
+  .Footer-content {
+    // padding-top: $size-9;
+    position: relative;
+    z-index: 10;
+  }
+
+  // text-align: center;
+  background-color: usetheme(background-light);
+}
+
+
+
+button {
+	&.__short {
+		line-height: 0;
+	}
+}
+
+
+
+
+
+._card {
+  &.__attention {
+    padding: $size/2 $size;
+    background-color: usetheme(brand-green-white);
+  }
+
+  &.__white {
+    background-color: white;
+  }
+}
+
+
+
+
+
+
+

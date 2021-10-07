@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "pdn-instill",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "now-sapper"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/client/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/redirect-url",
+      "destination": "https://wikipedia.com"
+    }
+  ]
+}

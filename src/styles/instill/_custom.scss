@@ -1,0 +1,561 @@
+
+
+
+.Home-content {
+	// padding-bottom: 90px;
+	position: relative;
+	z-index: 30;
+}
+    .Home-content-extra img {
+      @media (min-width: 767px) {
+        float: right;
+        max-width: 300px;
+        margin-left: 1rem;
+        margin-bottom: 0.5rem;
+
+      }
+    }
+
+    .Content-box h2 {
+      padding-top: 0;
+    }
+
+    .Content-box table {
+      width: 100%;
+    }
+    
+    // table stuff for pricing
+    th, td {
+      padding: 0.25rem 0.5rem;
+      padding-left: 0;
+    }
+
+
+
+
+
+
+.__border {
+  border: 2px solid usetheme(brand-active)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+.Form-body {
+	// awful override :)
+	padding: 0;
+}
+
+._loader.__circle {
+	top: -4px;
+	&:before {
+		background-color: white;
+	}
+}
+
+
+
+
+._pd-bg-color-ltgray {
+	background-color: #eef5fb
+}
+
+
+ 
+
+.ScheduleItem {
+
+	.date {
+		// font-weight: bold;
+		font-size: $size;
+		padding-bottom: $size;
+	}
+
+	._tag.open { 
+		background-color: usetheme(brand-active);
+		color: white;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+input.__text, button.__text, ._button.__text {
+	border: 2px solid usetheme(brand);
+	background-color: usetheme(brand);
+	color: usetheme(brand);
+	font-weight: normal;
+
+	&:hover {
+		background-color: white !important;
+		border-color: usetheme(brand) !important;
+		color: usetheme(brand) !important; 
+	}
+	&:active, &:focus {
+		background-color: usetheme(brand-soft) !important; // darken(usetheme(brand-active), 0.2);
+		color: usetheme(brand) !important;
+	}
+}
+
+
+ 
+input.__action, button.__action, ._button.__action {
+	border: 2px solid usetheme(brand);
+	background-color: usetheme(brand);
+	color: white;
+	font-weight: normal;
+
+	&:hover {
+		background-color: white !important;
+		border-color: usetheme(brand) !important;
+		color: usetheme(brand) !important; 
+	}
+	&:active, &:focus {
+		background-color: usetheme(brand-soft) !important; // darken(usetheme(brand-active), 0.2);
+		color: usetheme(brand) !important;
+	}
+}
+
+input.__action-outline, button.__action-outline, ._button.__action-outline {
+	border: 2px solid usetheme(brand);
+	background-color: white;
+	color: usetheme(brand);
+	font-weight: normal;
+
+	&:hover {
+		background-color: usetheme(brand) !important;
+		border-color: usetheme(brand) !important;
+		color: white !important; 
+	}
+	&:active, &:focus {
+		background-color: usetheme(brand-soft) !important; // darken(usetheme(brand-active), 0.2);
+		color: usetheme(brand) !important;
+	}
+}
+
+input.__massive, button.__massive, ._button.__massive {
+	padding: $size-3 $size-3;
+	font-size: $size-3;
+  line-height: $size-3 * 1.1;
+	border-radius: $radius;
+  border: solid $border-thin;
+  @extend ._font-display;
+
+  &:focus {
+    border-color: usetheme(brand);
+    background-color: usetheme(brand-soft);
+    color: usetheme(brand) !important;
+  }
+  &:hover {
+    border-color: usetheme(brand) !important;
+    background-color: usetheme(background-light) !important;
+    color: usetheme(brand) !important;
+  }
+}
+
+
+
+
+@media (min-width: 768px) {
+	._section-article {
+		max-width: 32rem;
+	}
+}
+
+
+._section-wide { 
+  max-width: 88rem;
+}
+
+
+._section-superwide { 
+  max-width: 96rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// diamonds
+
+
+	.Separator {
+		position: relative;
+    height: 67px;
+    background-color: #DBF4E9;
+	}
+	.diamondsvg {
+		position: absolute;
+		width: 100%;
+		height: 300px;
+    min-width: 600px;
+    text-align: center;;
+
+		image {
+			width: 100%;
+		}
+	}
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  #betty-letter {
+    max-width: 88ch;
+    
+    p { 
+      font-family: 'Noto Serif', 'Georgia', serif;
+    }
+  }
+  ._betty-card {
+    background-color: white;
+    padding: 2rem 1rem;
+  }
+  ._betty-letter-shrunk {
+    max-height: 24rem;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      bottom: 0;  
+      height: 100%;
+      width: 100%;
+      content: "";
+      background: linear-gradient(to top,
+        rgba(255,255,255, 1) 0%, 
+        rgba(255,255,255, 0) 40%
+      );
+      pointer-events: none; /* so the text is still selectable */
+    }
+  }
+
+
+  ._betty-profile-img {
+    width: 64px; height: 64px;
+    margin-right: 0.75rem;
+    border-radius: 100%;
+  }
+
+
+
+  // hide submit button for Paypal
+#signup .submitButtonClasses {
+  padding: 0;
+  display: none;
+  margin: none;
+}
+  // force show checkout button
+  ._showCheckout .submitButtonClasses{
+    padding: $size-3 $size-3 !important;
+    margin: inherit !important;
+    display: block !important;
+  }
+
+
+.SponsorSection {
+  h2 {
+    padding-top: 0;
+    // padding-bottom: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.notion-list-todo {
+  input {
+    vertical-align: middle;
+    margin-right: 0.25rem;
+    margin-bottom: 0.01rem;
+  }
+}
+
+
+
+
+$notion-page-icon: $size-7;
+
+
+
+
+.notion-collection {
+  figure {
+    max-width: 100%;
+    overflow-x: scroll;
+    position: relative;
+  }
+  .notion-collection-table {
+
+    width: 100%;
+    
+    .__stack-xs td {
+      padding-left: 1rem !important;
+    }
+    
+    @extend ._table;
+    @extend .__stack-xs;
+  }
+}
+.notion-link {
+  word-break: break-word; // might break w/ long links, but this helps pre-line wrapped text blocks
+}
+.notion-text, .notion-callout-text {
+  white-space: pre-line;
+  // padding-left: $size;
+}
+.notion-callout {
+  align-items: start;
+
+  .notion-page-icon {
+    min-width: $notion-page-icon;
+    min-height: $notion-page-icon;
+    height: $notion-page-icon;
+    width: $notion-page-icon;
+    // margin-right: $size-half;
+    object-fit: contain;
+
+    // useful for icon spans
+    font-size: $size-4;
+    display: inline-block;
+    text-align: center;;
+  }
+  // span.notion-page-icon {
+  // }
+}
+
+
+
+// for embedded widgets in two-column notion pages
+.notion-row .notion-render {
+  min-width: 0; // prevents blowout
+  // padding-left: $size;
+  // &:first-child {
+  //   // flex-grow: 1; // for columns to split equally
+  //   flex-grow: 2;
+  //   flex-basis: 0;
+  // }
+  // &:last-child {
+  //   flex-grow: 1; // 2-1 split
+  //   flex-basis: 0;
+  // }
+
+  .notion-column {
+    width: 100% !important; 
+    padding-right: $size;
+  }
+}
+
+// this enlarges embedded notion assets, suitable for embedded widgets
+.notion-embed {
+  width: 100% !important;
+}
+.notion-callout {
+  align-items: center !important; // makes callouts centered
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  Messaging Widget
+
+*/
+.Messages {
+  // min-height: 50vh;
+  // max-height: 100%;
+  
+  @include screen-md {
+    position: sticky;
+    // height: 100%;
+    max-height: 96vh;
+  }
+
+  top: $size;
+  margin-bottom: $size;
+  padding-bottom: $size-half;
+}
+
+.MessageList {
+  overflow: scroll;
+}
+
+.MessageSender {
+  padding-bottom: $size-half;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+  Poster stuff
+
+*/
+
+.PosterGrid-category {
+  color: usetheme(brand);
+  @extend ._tag;
+  @extend ._font-small;
+  display: inline-block;
+}
+.PosterNumber {
+  padding: $size/4 $size;
+  border-radius: $size-half;
+  font-size: usetheme(font-large);
+  font-weight: 300;
+  background-color: usetheme(brand-green-lightest);
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+/* 
+
+  Speaker grid
+
+*/
+
+.Speaker-video {
+  background-color: usetheme(brand-green-lightest);
+  
+
+  img {
+    width: 100%;
+    text-align: center;
+    object-fit: contain;
+  }
+}
