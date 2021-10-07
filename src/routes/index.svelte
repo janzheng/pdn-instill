@@ -12,7 +12,7 @@
     <Notion loadingMsg='' classes={''} id={'8896881e7ff54319a8b59bf2c73080cd'} api={process.env.NOTION_API}/>
 
     <!-- controller table -->
-    <Notion loadingMsg='' classes={''} id={'74612f1ea711417a93966963376847b4'} type='table' api={process.env.NOTION_API}/>
+    <Notion loadingMsg='' bind:results={collectionData} classes={''} id={'74612f1ea711417a93966963376847b4'} type='collection' api={process.env.NOTION_API}/>
   </div>
 
   
@@ -52,5 +52,9 @@
 
   import ContentBlock from '@/components/ContentBlock.svelte'
 
-  let showBetty = false
+  export let collectionData
+
+  $: if(collectionData) {
+    console.log('collection data results:::', collectionData)
+  }
 </script>

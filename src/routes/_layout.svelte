@@ -32,7 +32,7 @@
   import { stores } from "@sapper/app";
   let page = stores().page
 
-  console.log('site data:', _SiteData)
+  console.log('_SiteData:', _SiteData)
 
   // load site data into store
 	$: if(_SiteData) {
