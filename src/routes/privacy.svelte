@@ -9,8 +9,8 @@
 
 <script>
   import marked from 'marked'
-  // import Notion from '@yawnxyz/svelte-notion'
-  import Notion from '../../../../../svelte-notion/src/Notion.svelte'
+  import Notion from '@yawnxyz/svelte-notion'
+  // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
 
 	import { _getBlock } from "@/stores/sitedata"
 
