@@ -5,14 +5,7 @@
 <div class="Home">
 
   <div class="_section-page _margin-center">
-    <!-- page -->
-    <!-- <Notion loadingMsg='' classes={''} id={'0804e9fadab8447dbe78d402d12e646a'} api={process.env.NOTION_API}/> -->
-
-    <!-- test page -->
-    <Notion loadingMsg='' classes={''} id={'8896881e7ff54319a8b59bf2c73080cd'} api={process.env.NOTION_API}/>
-
-    <!-- controller table -->
-    <!-- <Notion loadingMsg='' bind:results={collectionData} classes={''} id={'74612f1ea711417a93966963376847b4'} type='collection' api={process.env.NOTION_API}/> -->
+    <Notion loadingMsg='' classes={''} id={_getBlock('intro-v1')} api={process.env.NOTION_API}/>
   </div>
 
   
@@ -44,13 +37,11 @@
 <script>
 
   import marked from 'marked';
-	import { _content, _contents } from "@/stores/sitedata"
+	import { _content, _contents, _getBlock } from "@/stores/sitedata"
   import Notion from '@yawnxyz/svelte-notion'
   // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
 
-  import Separator from '../components/Separator.svelte'
-
-  import ContentBlock from '@/components/ContentBlock.svelte'
+	import { _getPost } from "@/stores/sitedata"
 
   export let collectionData
 

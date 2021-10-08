@@ -31,7 +31,7 @@
 
 <script>
 
-	import { SiteData, NotionData, _content, _get, _getBlock } from "@/stores/sitedata"
+	import { SiteData, NotionData, _content, _get } from "@/stores/sitedata"
 
 
 	import Nav from '../components/layout/NavInstill.svelte';

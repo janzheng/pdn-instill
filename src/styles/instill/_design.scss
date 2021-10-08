@@ -232,9 +232,13 @@ a, ._link {
     color: usetheme(links);
   };
 
-  &:hover, &:active, {
+  &:hover, &:active {
     color: usetheme(hover) !important; //$color-links;
     text-decoration-color: usetheme(hover) !important; //$color-links;
+
+    * { // allows for nesting h1 in a etc. and retain colors
+      color: usetheme(hover) !important; //$color-links;
+    }
   }
 
   &._button {

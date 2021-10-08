@@ -401,6 +401,11 @@ $notion-page-icon: $size-7;
     padding-right: $size;
   }
 }
+.notion-render {
+  ul {
+    padding-bottom: 0; // override other ul padding
+  }
+}
 
 // this enlarges embedded notion assets, suitable for embedded widgets
 .notion-embed {

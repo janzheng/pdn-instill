@@ -1202,10 +1202,10 @@
   dependencies:
     "@types/node" "*"
 
-"@yawnxyz/svelte-notion@^0.0.25":
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/@yawnxyz/svelte-notion/-/svelte-notion-0.0.25.tgz#cc8cfa0a590e47fc6f76af0a2c6e89b39ae82123"
-  integrity sha512-NskDRTcOot0sjqm608im/1vSmFiMWqp7taB/rY8UvBOwkXSVufPojvgFfOZLut2YoN4CiVJ8/+tr7wW+P1gW2w==
+"@yawnxyz/svelte-notion@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@yawnxyz/svelte-notion/-/svelte-notion-0.0.27.tgz#114eaef29eb7e1a2f8af2116414e6f26c3d0e3aa"
+  integrity sha512-ZmqFTDFKtEhwmlfEFS8mCw73VLxdjloM4F6j42LLHGBqDmnnK2aYMazyRk4xASRhtSTlViN3iUXl++fItAt3og==
   dependencies:
     clipboard "^2.0.6"
     prism-solarized-dark "^1.0.1"
