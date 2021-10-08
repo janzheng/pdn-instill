@@ -49,7 +49,8 @@
   import { stores } from "@sapper/app";
   let page = stores().page
 
-  console.log('_layout data:', _SiteData, _NotionData)
+  if(process.env.STATUS == 'Preview')
+    console.log('_layout data:', _SiteData, _NotionData)
 
   // load site data into store
 	$: if(_SiteData) {

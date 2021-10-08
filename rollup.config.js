@@ -98,6 +98,7 @@ export default {
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode),
         'process.env.PROJECT_ID': JSON.stringify(process.env.PROJECT_ID),
+        'process.env.STATUS': JSON.stringify(process.env.STATUS),
 
         // env keys for the public!
         'process.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
