@@ -116,46 +116,48 @@ input, textarea {
 
 // header tab nav
 .Nav {
+  a {
+    font-size: $size-2;
+  }
+// 	ul {
+// 		text-align: center;
 
-	ul {
-		text-align: center;
+//     // @include screen-md {
+//     //   display: flex;
+//     //   justify-content: center;
+//     // }
 
-    // @include screen-md {
-    //   display: flex;
-    //   justify-content: center;
-    // }
+// 		li {
+// 			margin: 0.5rem 0.5rem;
+// 			text-align: left;
+//       white-space: nowrap;
 
-		li {
-			margin: 0.5rem 0.5rem;
-			text-align: left;
-      white-space: nowrap;
+//       display: inline-block;
 
-      display: inline-block;
-
-			a {
-        background: white;
-        padding: $size-half $size;
-        @extend ._shadow-1;
-        border-radius: $size-5;
+// 			a {
+//         background: white;
+//         padding: $size-half $size;
+//         @extend ._shadow-1;
+//         border-radius: $size-5;
         
-				font-size: 1.1em;
-				text-decoration: none;
+// 				font-size: 1.1em;
+// 				text-decoration: none;
 
-				&.__active {
-          background-color: usetheme(brand-active);
-          color: white;
-				}
+// 				&.__active {
+//           background-color: usetheme(brand-active);
+//           color: white;
+// 				}
 
-				&:hover {
-          background-color: usetheme(brand-active);
-          color: white !important;
-				}
+// 				&:hover {
+//           background-color: usetheme(brand-active);
+//           color: white !important;
+// 				}
 
-			}
+// 			}
 
 
-		}
-	}
+// 		}
+// 	}
 }
 
 

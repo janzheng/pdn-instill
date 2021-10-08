@@ -1,7 +1,7 @@
 
 
 <!-- <Separator /> -->
-<div class="Home">
+<div class="Home _divider-top _divider-bottom">
 
   <div class="_section-page _margin-center">
     <Notion loadingMsg='' classes={''} id={_getBlock('intro-v1')} api={process.env.NOTION_API}/>

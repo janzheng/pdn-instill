@@ -33,8 +33,14 @@
             <img class="Header-img" src="instill.png" alt="Instill Science" style="width: 64px;">
           </a>
         </div>
-        <div class="_flex-1" >
+        <div class="_flex-1 _flex _flex-right" >
           <!-- Nav here -->
+          <div class="_padding-right-2">
+            <a rel=prefetch class='{$page.path === "/join" ? "__active" : ""}' aria-current='{segment === "/join" ? "page" : undefined}' href='/join'>Join Instill</a>
+          </div>
+          <div>
+            <a rel=prefetch class='{$page.path === "/request" ? "__active" : ""}' aria-current='{segment === "/request" ? "page" : undefined}' href='/request'>Open a Request</a>
+          </div>
         </div>
       </div>
     </div>
@@ -76,5 +82,10 @@
 		position: relative;
 		left: -6px;
 	}
+
+  a.__active {
+    color: #0361FF !important;
+    text-decoration: none !important;
+  }
 
 </style>

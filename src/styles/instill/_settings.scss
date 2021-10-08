@@ -113,6 +113,7 @@ $colors-brand: (
   brand: #5432CA,// old, bluer: #146F47, // 
   brand-med: #9D83F8, // 
   brand-soft: #F5F0FC, // 
+  brand-blue: #0361FF,
   // brand-active: #1faf71, // #065fb1,
   brand-white: #f7fffb, // 
   brand-copy: #140116,
@@ -169,7 +170,7 @@ $context: (
   header-color: usetheme(mono-600),
 
   links: usetheme(brand-active),
-  hover: usetheme(brand),
+  hover: usetheme(brand-blue),
   links-decoration: usetheme(brand-active),
   highlight: usetheme(secondary-300),
   
