@@ -33,7 +33,7 @@
           {:else}
             <h3 class="_planned _padding-bottom">{post.Name} <span class="_font-normal">(planned)</span></h3>
           {/if}
-          <span class="_tag">{post.Status}</span>
+          <!-- <span class="_tag">{post.Status}</span> -->
         </div>
       {/if}
     {/each}
