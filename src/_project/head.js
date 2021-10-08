@@ -6,7 +6,8 @@ import { writable, get } from 'svelte/store';
 
 export const site_ga = ''; // through segment
 // export const site_segment = 'QF5RTz2c5w4fzllUvqERA9GjaCgqdGhj'; // alphaguide segment ID
-export const site_url = 'https://instill.xyz';
+// export const site_url = 'https://instill.xyz';
+export const site_url = '/';
 export const site_name = 'Instill Science';
 export const site_title = 'Instill Science';
 export const site_twitter = '@phagedirectory';

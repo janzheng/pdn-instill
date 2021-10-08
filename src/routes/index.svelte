@@ -1,7 +1,6 @@
 
 
 <!-- <Separator /> -->
-
 <div class="Home">
 
   <div class="_section-page _margin-center">
@@ -37,7 +36,7 @@
 <script>
 
   import marked from 'marked';
-	import { _content, _contents, _getBlock } from "@/stores/sitedata"
+	import { _content, _contents, NotionData, _getBlock } from "@/stores/sitedata"
   import Notion from '@yawnxyz/svelte-notion'
   // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
 
