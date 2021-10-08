@@ -4,12 +4,24 @@
 <div class="Home _divider-top _divider-bottom">
 
   <div class="_section-page _margin-center">
-    <Notion loadingMsg='' classes={''} id={_getBlock('intro-v1')} api={process.env.NOTION_API}/>
+    <Notion loadingMsg='' classes={''} id={_getBlock('instill-hero')} api={process.env.NOTION_API}/>
   </div>
 
-  
+  <div class="_section-page _margin-center">
+    <Notion loadingMsg='' classes={''} id={_getBlock('instill-quad')} api={process.env.NOTION_API}/>
+  </div>
+
+  <!-- <div class="_section-page _margin-center">
+    <Notion loadingMsg='' classes={''} id={_getBlock('intro-v1')} api={process.env.NOTION_API}/>
+  </div> -->
+
+
 
   <Collabs></Collabs>
+
+  <PeerPreviews></PeerPreviews>
+
+
 
   <div class="_section-page _margin-center _grid-3-2 _divider-top _divider-bottom">
     <Members></Members>
@@ -50,6 +62,7 @@
 
   import Blog from '../components/Blog.svelte'
   import Collabs from '../components/Collabs.svelte'
+  import PeerPreviews from '../components/PeerPreviews.svelte'
   import Advisors from '../components/Advisors.svelte'
   import Members from '../components/Members.svelte'
 

@@ -25,7 +25,7 @@
 
     <div class="_card _padding">
       {#each advisors as advisor}
-        <div class="_margin-bottom-2">
+        <div class="_margin-bottom">
           <div class="_flex _flex-1 _align-vertically">
             {#if $Profiles[advisor.fields['Slug']] && $Profiles[advisor.fields['Slug']].fields['ProfileImage']}
               <div class="_margin-right "><img style="border-radius: 100%; min-width: 32px; min-height: 32px; background-size: cover;" width="64" height="64" src="{$Profiles[advisor.fields['Slug']].fields['ProfileImage'][0].thumbnails.large.url}" alt="{advisor.fields['Slug']}"/></div>

@@ -25,12 +25,12 @@
 
     <div class="_card _padding">
       {#each items as item}
-        <div class="_margin-bottom-2">
+        <div class="_margin-bottom">
           <div class="_flex _flex-1 _align-vertically">
             {#if $Profiles[item.fields['Slug']] && $Profiles[item.fields['Slug']].fields['ProfileImage']}
-              <div class="_margin-right "><img style="border-radius: 100%; min-width: 32px; min-height: 32px; background-size: cover;" width="64" height="64" src="{$Profiles[item.fields['Slug']].fields['ProfileImage'][0].thumbnails.large.url}" alt="{item.fields['Slug']}"/></div>
+              <div class="_margin-right "><img style="border-radius: 100%; min-width: 32px; min-height: 32px; background-size: cover;" width="48" height="48" src="{$Profiles[item.fields['Slug']].fields['ProfileImage'][0].thumbnails.large.url}" alt="{item.fields['Slug']}"/></div>
             {:else}
-              <div class="_margin-right "><img style="border-radius: 100%; min-width: 32px; min-height: 32px; background-size: cover;" width="64" height="64" src="https://dl.airtable.com/.attachmentThumbnails/5f73211953262a41d993a9cd077a4ec9/370c6e95" alt="{item.fields['Slug']}"/></div>
+              <div class="_margin-right "><img style="border-radius: 100%; min-width: 32px; min-height: 32px; background-size: cover;" width="48" height="48" src="https://dl.airtable.com/.attachmentThumbnails/5f73211953262a41d993a9cd077a4ec9/370c6e95" alt="{item.fields['Slug']}"/></div>
             {/if}
             <div class="_flex-1">{item.fields['Name']}</div>
           </div>

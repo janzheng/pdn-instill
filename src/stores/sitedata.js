@@ -35,10 +35,10 @@ export const _contents = (names) => {
 } 
 
 
-export const _getCollabs = (table='1. Open Requests') => {
+export const _getRequests = (request='Collaborator for experiments, sequencing, data analysis, etc.', table='1. Open Requests') => {
   let items = []
   get(SiteData) && get(SiteData)[table] && get(SiteData)[table].forEach(e => {
-    if(e.fields['Request Type'].includes('Collaborator for experiments, sequencing, data analysis, etc.'))
+    if(e.fields['Request Type'].includes(request))
       items.push(e)
   })
   return items
@@ -64,7 +64,8 @@ export const _getMembers = (type='Advisor', table='Members') => {
 // e.g. if a table has "_blog" as the Name for a row, it gets the _blockid field
 export const _getBlock = (name, collection='whimsy') => {
   let result = get(NotionData) && get(NotionData)[collection] && get(NotionData)[collection].rows.find(r => r['Name'] == name)
-  return result['_blockid']
+  if(result)
+    return result['_blockid']
 } 
 
 // gets a blog post
