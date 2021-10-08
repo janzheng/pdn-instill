@@ -62,8 +62,29 @@ export const getContentFromAirtable = async () => {
 	if(cacheGet(_cacheStr) && process.env.CACHE && !process.env.CACHE=='NoCache')
 		return cacheGet(_cacheStr)
 
-  let bases = [{
-	  tables: ["Content", "Members", "1. Open Requests"],
+  let bases = [
+
+  {
+	  tables: ["1. Open Requests",],
+	  options: {
+	    "view": view,
+      "fields":[
+        'Name',
+        'request_id',
+        'Request Type',
+        'Public Request',
+        'People',
+        'Member',
+        'Public Attachments',
+        'Date Created',
+        'Reply Form',
+        'reply_url',
+        'Slug',
+      ]
+	  }
+  },
+  {
+	  tables: ["Members", "Content"],
 	  options: {
 	    "view": view,
 	  }

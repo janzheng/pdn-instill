@@ -9,8 +9,12 @@
 
   
 
+  <Collabs></Collabs>
 
-
+  <div class="_section-page _margin-center _grid-3-2 _divider-top _divider-bottom">
+    <Members></Members>
+    <Advisors></Advisors>
+  </div>
 
   <Blog></Blog>
   <!-- https://phagedirectory.notion.site/Copy-of-MRFF-Site-v1-Intro-54534d55bf384c11aa1f1e0a83c11c58 -->
@@ -42,9 +46,12 @@
   import marked from 'marked';
 	import { _content, _contents, NotionData, _getBlock } from "@/stores/sitedata"
   import Notion from '@yawnxyz/svelte-notion'
+  // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
 
   import Blog from '../components/Blog.svelte'
-  // import Notion from '../../../../../svelte-notion/src/Notion.svelte'
+  import Collabs from '../components/Collabs.svelte'
+  import Advisors from '../components/Advisors.svelte'
+  import Members from '../components/Members.svelte'
 
 	import { _getPost } from "@/stores/sitedata"
 
