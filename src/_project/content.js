@@ -73,7 +73,6 @@ export const getContentFromAirtable = async () => {
         'request_id',
         'Request Type',
         'Public Request',
-        'People',
         'Member',
         'Public Attachments',
         'Date Created',

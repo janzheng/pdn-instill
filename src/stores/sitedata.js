@@ -38,8 +38,9 @@ export const _contents = (names) => {
 export const _getRequests = (request='Collaborator for experiments, sequencing, data analysis, etc.', table='1. Open Requests') => {
   let items = []
   get(SiteData) && get(SiteData)[table] && get(SiteData)[table].forEach(e => {
-    if(e.fields['Request Type'].includes(request))
+    if(e.fields['Request Type'].includes(request)) {
       items.push(e)
+    }
   })
   return items
 } 

@@ -1,14 +1,17 @@
 
 <script>
-	import { _getRequests, _fetchProfiles, Profiles, _getBlock } from "@/stores/sitedata"
+	import { _getRequests, _fetchProfiles, Profiles, _getBlock, SiteData } from "@/stores/sitedata"
   import Notion from '@yawnxyz/svelte-notion'
   import marked from 'marked';
 
   let previews = _getRequests('Manuscript Feedback: Peer Preview')
+  let allslugs = []
 
   previews.forEach( preview => {
-    _fetchProfiles(preview.fields['Slug'])
-  })
+    if(preview.fields['Slug'] && preview.fields['Slug'].length > 0)
+      allslugs = [...allslugs, ...preview.fields['Slug']]
+    })
+    _fetchProfiles(allslugs)
 
 </script>
 
