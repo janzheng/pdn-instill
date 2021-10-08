@@ -13,9 +13,6 @@
   })
   _fetchProfiles(allslugs)
 
-
-  $: console.log('items:', items, allslugs)
-  $: console.log('Profiles', $Profiles)
 </script>
 
 
