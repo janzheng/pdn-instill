@@ -27,7 +27,7 @@
     <Notion loadingMsg='' classes={''} id={_getBlock('peerpreviews-cta')} api={process.env.NOTION_API}/>
   </div>
   <div class='_margin-bottom'>
-    <a class='_button __action' href='=/request'>Request a Peer Preview</a>
+    <a class='_button __action' href='/request'>Request a Peer Preview</a>
   </div>
   
   {#if previews && previews.length > 0}

@@ -60,7 +60,7 @@
 	}
 
   // load notion data into store
-	$: if(_SiteData) {
+	$: if(_NotionData) {
 		$NotionData = _NotionData
 	}
 

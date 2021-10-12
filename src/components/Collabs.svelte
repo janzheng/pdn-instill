@@ -24,7 +24,7 @@
     <Notion loadingMsg='' classes={''} id={_getBlock('collaborators-cta')} api={process.env.NOTION_API}/>
   </div>
   <div class='_margin-bottom'>
-    <a class='_button __action' href='=/request'>Find a Collaborator</a>
+    <a class='_button __action' href='/request'>Find a Collaborator</a>
   </div>
   
   {#if collabs && collabs.length > 0}
